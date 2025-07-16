@@ -12,3 +12,9 @@ Color mistBlue = Color(0xFFEAF6FF);
 
 Color softCream = Color(0xFFFFF8E7);
 Color softVender = Color(0xFFF5EEFF);
+
+Color black = Colors.black;
+
+Color grey = Colors.grey;
+
+Color white = Colors.white;
