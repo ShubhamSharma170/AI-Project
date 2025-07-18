@@ -1,3 +1,9 @@
+import 'package:ai_project/pages/features/ai_translator_page.dart';
+import 'package:ai_project/pages/features/chat_bot_page.dart';
+import 'package:ai_project/pages/features/image_generator_page.dart';
+import 'package:flutter/foundation.dart';
+import 'package:get/get.dart';
+
 enum HomeType { aiChatBot, aiImage, aiTranslator }
 
 extension MyHomeType on HomeType {
@@ -19,5 +25,12 @@ extension MyHomeType on HomeType {
     HomeType.aiChatBot => true,
     HomeType.aiImage => false,
     HomeType.aiTranslator => true,
+  };
+
+  // for Navigation
+  VoidCallback get onTap => switch (this) {
+    HomeType.aiChatBot => () => Get.to(() => const ChatBotPage()),
+    HomeType.aiImage => () => Get.to(() => const ImageGeneratorPage()),
+    HomeType.aiTranslator => () => Get.to(() => const AITranslatorPage()),
   };
 }
