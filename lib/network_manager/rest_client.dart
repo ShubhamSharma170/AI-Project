@@ -1,11 +1,13 @@
 import 'package:ai_project/constant/ai_api.dart';
+import 'package:ai_project/model/ai_response_model.dart';
 import 'package:ai_project/network_manager/http_helper.dart';
 
 class RestClient {
   static final HttpHelper httpHelper = HttpHelper();
+  AiResponseModel aiResponseModel = AiResponseModel();
 
- static Future<dynamic> getChatBotData(String content) async {
-  Map<String, dynamic> response = await  httpHelper.postAPI(
+  static Future<AiResponseModel> getChatBotData(String content) async {
+    Map<String, dynamic> response = await httpHelper.postAPI(
       url: chatBotUrl,
       body: {
         "model": model,
@@ -13,8 +15,9 @@ class RestClient {
           {"role": "user", "content": content},
         ],
       },
-      isRequiredAuthorization: true
+      isRequiredAuthorization: true,
     );
-    return response;
+
+    return AiResponseModel.fromJson(response);
   }
 }
