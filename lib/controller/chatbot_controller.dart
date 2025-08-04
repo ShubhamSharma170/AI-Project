@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:ai_project/model/message.dart';
 import 'package:ai_project/network_manager/rest_client.dart';
 import 'package:flutter/material.dart';

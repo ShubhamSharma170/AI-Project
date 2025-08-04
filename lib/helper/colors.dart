@@ -14,6 +14,7 @@ Color mistBlue = Color(0xFFEAF6FF);
 
 Color softCream = Color(0xFFFFF8E7);
 Color softVender = Color(0xFFF5EEFF);
+Color softFFF8E7 = Color(0xFFFFF8E7);
 
 Color black = Colors.black;
 

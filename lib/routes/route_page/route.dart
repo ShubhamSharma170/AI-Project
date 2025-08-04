@@ -1,3 +1,4 @@
+import 'package:ai_project/pages/auth/login_page.dart';
 import 'package:ai_project/pages/home/home_page.dart';
 import 'package:ai_project/pages/onboard_page/onboard_page.dart';
 import 'package:ai_project/routes/route_name/route_name.dart';
@@ -9,7 +10,13 @@ class Routes {
       case RoutesName.home:
         return MaterialPageRoute(builder: (BuildContext context) => HomePage());
       case RoutesName.onboard:
-        return MaterialPageRoute(builder: (BuildContext context) => OnboardPage());
+        return MaterialPageRoute(
+          builder: (BuildContext context) => OnboardPage(),
+        );
+      case RoutesName.login:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => LoginPage(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) =>
