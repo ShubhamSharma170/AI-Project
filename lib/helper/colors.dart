@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors
+
 import 'package:flutter/material.dart';
 
 Color primaryColor = Color(0xFF6F35A5);
@@ -20,6 +22,14 @@ Color black = Colors.black;
 
 Color grey = Colors.grey;
 
+Color blue3ed1fd = Color(0xFFF3ed1fd);
+
+Color yellowffd048 = Color(0xFFFffd048);
+
+Color purple804bd3 = Color(0xFFF804bd3);
 Color white = Colors.white;
+
+Color red = Colors.red;
+Color green = Colors.green;
 
 List<Color> appbarColor = [blue00C2FF, orangeFFB44D];

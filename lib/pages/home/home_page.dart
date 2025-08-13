@@ -29,6 +29,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     mq = MediaQuery.sizeOf(context);
     return Scaffold(
+      backgroundColor: yellowffd048,
       appBar: AppBar(
         title: const Text("Ai Assistant"),
         actions: [

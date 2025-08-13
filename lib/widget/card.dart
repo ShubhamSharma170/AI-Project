@@ -18,7 +18,7 @@ class CardWidget extends StatelessWidget {
       child: InkWell(
         onTap: homeType.onTap,
         child: Card(
-          color: blue00C2FF.withAlpha(400),
+          color: softCream,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),

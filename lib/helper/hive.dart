@@ -12,4 +12,9 @@ class HiveHelper {
   static bool get showOnboard => _box.get('showOnboard', defaultValue: true);
 
   static set showOnboard(bool value) => _box.put('showOnboard', value);
+
+  // check login or not
+  static bool get isLogin => _box.get("isLoggedIn", defaultValue: false);
+
+  static set setLogin(bool value) => _box.put("isLoggedIn", value);
 }

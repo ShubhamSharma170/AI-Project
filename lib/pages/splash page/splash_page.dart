@@ -1,9 +1,10 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:ai_project/constant/size.dart';
-import 'package:ai_project/custom/custom_loading.dart';
+import 'package:ai_project/custom/custom_loading_lottie.dart';
 import 'package:ai_project/helper/colors.dart';
 import 'package:ai_project/helper/hive.dart';
+import 'package:ai_project/pages/auth/login_page.dart';
 import 'package:ai_project/pages/home/home_page.dart';
 import 'package:ai_project/pages/onboard_page/onboard_page.dart';
 import 'package:flutter/material.dart';
@@ -25,9 +26,7 @@ class _SplashPageState extends State<SplashPage> {
           //   context,
           //   HiveHelper.showOnboard ? RoutesName.onboard : RoutesName.home,
           // ),
-          Get.off(()=>
-            HiveHelper.showOnboard ? OnboardPage() : HomePage(),
-          ),
+          Get.off(() => HiveHelper.showOnboard ? OnboardPage() : HiveHelper.isLogin?HomePage():LoginPage()),
     );
     // ).then((value) => Navigator.pushNamed(context, RoutesName.home));
     super.initState();

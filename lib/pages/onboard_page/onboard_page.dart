@@ -2,7 +2,7 @@ import 'package:ai_project/helper/colors.dart';
 import 'package:ai_project/helper/hive.dart';
 import 'package:ai_project/helper/text_style.dart';
 import 'package:ai_project/model/onboard_model.dart';
-import 'package:ai_project/pages/home/home_page.dart';
+import 'package:ai_project/pages/auth/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -92,7 +92,7 @@ class _OnboardPageState extends State<OnboardPage> {
                 if (index == list.length - 1) {
                   HiveHelper.showOnboard = false;
                   // Navigator.pushNamed(context, RoutesName.home);
-                  Get.off(() => HomePage());
+                  Get.off(() => LoginPage());
                 } else {
                   controller.nextPage(
                     duration: Duration(milliseconds: 500),
